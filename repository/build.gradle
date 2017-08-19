@@ -1,0 +1,32 @@
+sourceCompatibility = 1.8
+
+repositories {
+    mavenLocal()
+    mavenCentral()
+}
+
+dependencies {
+    compile project(':model')
+}
+
+dependencies {
+    testCompile group: 'junit', name: 'junit', version: '4.11'
+}
+
+// 配置 test 任务的信息
+test {
+    // 设置系统属性
+    systemProperty 'items', '20'
+    // 提供 JVM Heap 设置
+    minHeapSize = '128m'
+    maxHeapSize = '512m'
+    // 设置 JVM 的 Perm Gen 的最大大小
+    jvmArgs '-XX:MaxPermSize=128m'
+
+    testLogging {
+        // 打开标准输出与错误流的日志
+        forkEvery = 5
+        maxParallelForks = Runtime.runtime.availableProcessors() / 2
+    }
+
+}

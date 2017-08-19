@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>LOOK</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
+    <meta name="format-detection" content="telephone=no">
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="/statics/css/reset.css">
+    <script>!function (e) {
+        function t(a) {
+            if (i[a])return i[a].exports;
+            var n = i[a] = {exports: {}, id: a, loaded: !1};
+            return e[a].call(n.exports, n, n.exports, t), n.loaded = !0, n.exports
+        }
+
+        var i = {};
+        return t.m = e, t.c = i, t.p = "", t(0)
+    }([function (e, t) {
+        "use strict";
+        Object.defineProperty(t, "__esModule", {value: !0});
+        var i = window;
+        t["default"] = i.flex = function (e, t) {
+            var a = e || 100, n = t || 1, r = i.document, o = navigator.userAgent, d = o.match(/Android[\S\s]+AppleWebkit\/(\d{3})/i), l = o.match(/U3\/((\d+|\.){5,})/i), c = l && parseInt(l[1].split(".").join(""), 10) >= 80, p = navigator.appVersion.match(/(iphone|ipad|ipod)/gi), s = i.devicePixelRatio || 1;
+            p || d && d[1] > 534 || c || (s = 1);
+            var u = 1 / s, m = r.querySelector('meta[name="viewport"]');
+            m || (m = r.createElement("meta"), m.setAttribute("name", "viewport"), r.head.appendChild(m)), m.setAttribute("content", "width=device-width,user-scalable=no,initial-scale=" + u + ",maximum-scale=" + u + ",minimum-scale=" + u), r.documentElement.style.fontSize = a / 2 * s * n + "px"
+        }, e.exports = t["default"]
+    }]);
+    flex(100, 1);
+    </script>
+    <link href="/statics/js/style.css" rel="stylesheet">
+</head>
+<body>
+<div id="app" style="width: 100%;height: 100%"></div>
+<script src="/statics/lib/fastclick.js"></script>
+<script>if ('addEventListener' in document) {
+    document.addEventListener('DOMContentLoaded', function () {
+        FastClick.attach(document.body);
+    }, false);
+}</script>
+<script>if (!window.Promise) {
+    document.writeln('<script src="https://as.alipayobjects.com/g/component/es6-promise/3.2.2/es6-promise.min.js"' + '>' + '<' + '/' + 'script>');
+}</script><!-- reactive rem -->
+<script>(function (doc, win) {
+    var docEl = doc.documentElement,
+        resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+        recalc = function () {
+            var devicePixelRatio = window.devicePixelRatio;
+            var clientWidth = docEl.clientWidth;
+            if (!clientWidth) return;
+            if (clientWidth >= 750 && devicePixelRatio == 2) {
+                docEl.style.fontSize = '100px';
+            }
+            else {
+                docEl.style.fontSize = 100 * (clientWidth / (375 * devicePixelRatio)) * devicePixelRatio / 2 + 'px';
+            }
+        };
+    if (!doc.addEventListener) return;
+    win.addEventListener(resizeEvt, recalc, false);
+    doc.addEventListener('DOMContentLoaded', recalc, false);
+    /*DOMContentLoaded文档加载完成不包含图片资源 onload包含图片资源*/
+})(document, window);</script><!-- bc pay -->
+<script id="spay-script"
+        src="https://jspay.beecloud.cn/1/pay/jsbutton/returnscripts?appId=f89d8684-6c20-4d4b-a14a-e9538664c8d5"></script>
+<!-- wx -->
+<script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+<script src="https://qiyukf.com/script/63815e79081b8263e3fc0d621a8c066b.js" defer="defer"
+        async></script>
+<script src="/statics/lib/zepto.min.js"></script>
+<script type="text/javascript" src="/statics/js/vendor1.js"></script>
+<script type="text/javascript" src="/statics/js/vendor2.js"></script>
+<script type="text/javascript" src="/statics/js/app.js"></script>
+</body>
+</html>

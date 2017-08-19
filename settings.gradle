@@ -1,0 +1,8 @@
+rootProject.name = 'mygradle'
+
+// 将给定的子项目添加到构建中，传给 include 方法的参数是项目路径，不是文件的路径
+include 'model'
+
+// 将项目的字符串数组传给方法调用，而不是为每一个单独的子项目调用 include 方法
+include 'repository', 'web'
+
