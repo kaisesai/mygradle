@@ -14,3 +14,5 @@ repository/src/main/resources/
 repository/src/test/resources/
 web/out/
 web/src/test/
+mygradle.iml
+web/build/
