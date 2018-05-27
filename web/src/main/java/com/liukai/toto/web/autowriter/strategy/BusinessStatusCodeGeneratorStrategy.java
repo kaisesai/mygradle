@@ -2,13 +2,21 @@ package com.liukai.toto.web.autowriter.strategy;
 
 /**
  * 业务状态代码代码生成策略
- * Created by liukai on 2017/6/9.
+ *
+ * @author liukai
+ * @date 2017/6/9
  */
 public class BusinessStatusCodeGeneratorStrategy implements CodeGeneratorStrategy {
 
-  private String sourceFile = filePath + "BusinessStatusEnum.txt";// 源文件
+  /**
+   * 源文件
+   */
+  private String sourceFile = filePath + "BusinessStatusEnum.txt";
 
-  private String targetFile = filePath + "BusinessStatusEnum_autoGenerate_code.txt";// 目标文件
+  /**
+   * 目标文件
+   */
+  private String targetFile = filePath + "BusinessStatusEnum_autoGenerate_code.txt";
 
   @Override
   public String generateCode(int lineNum, String line) {
@@ -32,10 +40,12 @@ public class BusinessStatusCodeGeneratorStrategy implements CodeGeneratorStrateg
     return sb.toString();
   }
 
+  @Override
   public String getSourceFile() {
     return sourceFile;
   }
 
+  @Override
   public String getTargetFile() {
     return targetFile;
   }

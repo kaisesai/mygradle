@@ -4,7 +4,9 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 /**
- * Created by liukai on 2017/6/9.
+ *
+ * @author liukai
+ * @date 2017/6/9
  */
 @RestController
 @RequestMapping("/web")

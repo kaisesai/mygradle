@@ -6,13 +6,7 @@ repositories {
 }
 
 dependencies {
-//    testCompile group: 'junit', name: 'junit', version: '4.10'
-    testCompile 'org.testng:testng:6.8'
-    compile("org.springframework.boot:spring-boot-starter-web:1.4.3.RELEASE")
-    compile 'org.apache.commons:commons-lang3:3.4'
-    compile 'com.google.zxing:core:3.3.0'
-    compile 'com.google.zxing:javase:3.3.0'
-    compile 'com.alibaba:fastjson:1.2.37'
+    compile project(':common')
 }
 
 test.useTestNG()

@@ -1,0 +1,16 @@
+##############################
+## Folders                  ##
+##############################
+.idea
+.gradle/
+common/out/
+common/src/main/resources/
+common/src/test/
+model/out/
+model/src/main/resources/
+model/src/test/
+repository/out/
+repository/src/main/resources/
+repository/src/test/resources/
+web/out/
+web/src/test/
